@@ -4,7 +4,7 @@
  */
 const podcastLinks = {
   spotify: "https://open.spotify.com/show/5epA240nGssDsUqKTvniwf",
-  apple: "#",
+  apple: "https://podcasts.apple.com/us/podcast/k%C3%BChnert-schroeder/id6831165042",
   amazon: "#",
   deezer: "#",
   youtube: "https://www.youtube.com/@KuehnertundSchroeder",
