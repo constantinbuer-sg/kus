@@ -8,7 +8,7 @@
  *  2. Typografie & Buttons
  *  3. Header / Navigation
  *  4. Hero
- *  5. Sektionen (Startseite): Hören, Presse-Teaser, Werbung + Formular
+ *  5. Sektionen (Startseite): Hören, Presse-Teaser, Werbung
  *  6. Pressebereich: Downloads
  *  7. Rechtstexte
  *  8. Footer
@@ -40,8 +40,6 @@
   --ks-muted: rgba(255, 255, 255, 0.78);
   --ks-faint: rgba(255, 255, 255, 0.62);
   --ks-rule: rgba(255, 255, 255, 0.28);
-  --ks-field: rgba(26, 24, 73, 0.45);
-  --ks-error: #ffb3a1;
 
   --font-display: "Anton", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --font-text: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -113,7 +111,6 @@ a { color: inherit; }
   background: transparent; color: var(--ks-faint);
   box-shadow: inset 0 0 0 2px var(--ks-rule); cursor: not-allowed; pointer-events: none;
 }
-.button[disabled] { opacity: 0.6; cursor: progress; }
 .icon { width: 0.8em; height: 0.8em; flex: none; }
 
 /* ================================================================
@@ -248,56 +245,16 @@ a.platform:hover { background: rgba(255, 255, 255, 0.06); color: var(--ks-orange
 /* --- Werbung --- */
 .partner-note { margin-top: 28px; }
 
-/* --- Formular --- */
+/* --- Kontakt per E-Mail --- */
 .form-intro {
   font-family: var(--font-display); font-size: clamp(1.375rem, 2vw, 1.75rem);
   line-height: 1.15; text-transform: uppercase; margin-bottom: 28px;
 }
-.contact-form { display: grid; gap: 22px; }
-.form-row { display: grid; gap: 22px; }
-@media (min-width: 640px) { .form-row { grid-template-columns: 1fr 1fr; } }
-.field { display: grid; gap: 8px; }
-.field label {
-  font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--ks-muted);
-}
-.field input, .field textarea {
-  width: 100%; padding: 14px 16px; border: 1px solid var(--ks-rule); border-radius: 4px;
-  background: var(--ks-field); color: var(--ks-white);
-  font: inherit; font-size: 1rem; line-height: 1.5;
-  transition: border-color 0.15s ease;
-}
-.field textarea { min-height: 168px; resize: vertical; }
-.field input:hover, .field textarea:hover { border-color: rgba(255, 255, 255, 0.5); }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--ks-orange); box-shadow: 0 0 0 1px var(--ks-orange); }
-.field [aria-invalid="true"] { border-color: var(--ks-error); }
-/* Automatisch ausgefüllte Felder (Browser-Autofill) bleiben dunkel statt hellblau */
-.field input:-webkit-autofill,
-.field input:-webkit-autofill:hover {
-  -webkit-text-fill-color: var(--ks-white); caret-color: var(--ks-white);
-  -webkit-box-shadow: inset 0 0 0 1000px #332766;
-  transition: background-color 9999s ease-out 0s;
-}
-.field input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1px var(--ks-orange), inset 0 0 0 1000px #332766;
-}
-.field input:autofill { -webkit-text-fill-color: var(--ks-white); }
-.field-error { font-size: 0.875rem; color: var(--ks-error); }
-.field-error:empty { display: none; }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
-.form-hint { font-size: 0.875rem; color: var(--ks-faint); }
-.form-hint a { color: var(--ks-muted); }
-.form-status { font-size: 1rem; }
-.form-status:empty { display: none; }
-.form-status.is-error { color: var(--ks-error); }
-.form-success {
-  padding: 32px 0; border-top: 1px solid var(--ks-rule); border-bottom: 1px solid var(--ks-rule);
-  font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1;
-  text-transform: uppercase;
-}
-.form-success:focus { outline: none; }
-@media (max-width: 559px) { .form-actions .button { width: 100%; } }
+.contact-address { margin-top: 20px; font-size: 1rem; color: var(--ks-muted); }
+.contact-address a { color: var(--ks-white); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.contact-address a:hover { color: var(--ks-orange-text); }
+@media (min-width: 960px) { .contact-cta { align-self: center; } }
+@media (max-width: 559px) { .contact-cta .button { width: 100%; } }
 
 /* ================================================================
    6. Pressebereich: Downloads

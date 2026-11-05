@@ -113,7 +113,8 @@
     </div>
   </section>
 
-  <!-- ============ WERBUNG + FORMULAR ============ -->
+  <!-- ============ WERBUNG ============
+       Kontakt per E-Mail-Link. Adresse hier an beiden Stellen ändern. -->
   <section id="werbung" class="section section-gradient" aria-labelledby="werbung-title">
     <div class="split" data-reveal>
       <div>
@@ -122,42 +123,10 @@
         <p class="lead">Kühnert &amp; Schroeder wird exklusiv von sounds good. vermarktet. Für ausgewählte Partner gibt es Host Reads mit Kevin und Florian – in Audio und Video. Was passt, besprechen wir individuell.</p>
       </div>
 
-      <div>
+      <div class="contact-cta">
         <p class="form-intro">Interesse an einer Partnerschaft? Schreib uns kurz.</p>
-        <form class="contact-form" action="/api/contact" method="post" novalidate data-contact-form>
-          <div class="form-row">
-            <div class="field">
-              <label for="f-name">Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="err-name">
-              <p class="field-error" id="err-name" aria-live="polite"></p>
-            </div>
-            <div class="field">
-              <label for="f-company">Firma</label>
-              <input id="f-company" name="company" type="text" autocomplete="organization" required maxlength="160" aria-describedby="err-company">
-              <p class="field-error" id="err-company" aria-live="polite"></p>
-            </div>
-          </div>
-          <div class="field">
-            <label for="f-email">E-Mail</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="err-email">
-            <p class="field-error" id="err-email" aria-live="polite"></p>
-          </div>
-          <div class="field">
-            <label for="f-message">Nachricht</label>
-            <textarea id="f-message" name="message" required maxlength="5000" aria-describedby="err-message"></textarea>
-            <p class="field-error" id="err-message" aria-live="polite"></p>
-          </div>
-          <!-- Honeypot gegen Spam: für Menschen unsichtbar -->
-          <div class="hp" aria-hidden="true">
-            <label for="f-website">Website</label>
-            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
-          </div>
-          <div class="form-actions">
-            <button class="button" type="submit">Abschicken</button>
-            <p class="form-hint">Mit dem Absenden gelten unsere <a href="/datenschutz">Datenschutzhinweise</a>.</p>
-          </div>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <a class="button button-large" href="mailto:team@kuehnertundschroeder.de?subject=Werbeanfrage%20K%C3%BChnert%20%26%20Schroeder">Schreib uns</a>
+        <p class="contact-address">oder direkt an <a href="mailto:team@kuehnertundschroeder.de?subject=Werbeanfrage%20K%C3%BChnert%20%26%20Schroeder">team@kuehnertundschroeder.de</a></p>
       </div>
     </div>
   </section>
