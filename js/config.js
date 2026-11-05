@@ -7,5 +7,5 @@ const podcastLinks = {
   apple: "#",
   amazon: "#",
   deezer: "#",
-  youtube: "#",
+  youtube: "https://www.youtube.com/@KuehnertundSchroeder",
 };
