@@ -44,26 +44,4 @@
       }
     });
   }
-
-  // Pressebereich: fehlende Downloads werden zu „Folgt in Kürze“, vorhandene zeigen ihre Größe
-  document.querySelectorAll("[data-download]").forEach(function (link) {
-    var meta = link.closest(".download, .hero-actions").querySelector("[data-size]");
-    fetch(link.getAttribute("href"), { method: "HEAD", cache: "no-store" })
-      .then(function (res) {
-        if (!res.ok) throw new Error("missing");
-        var bytes = Number(res.headers.get("content-length"));
-        if (bytes && meta) {
-          var mb = bytes / 1048576;
-          meta.textContent += " · " + (mb >= 1 ? mb.toLocaleString("de-DE", { maximumFractionDigits: 1 }) + " MB" : Math.max(1, Math.round(bytes / 1024)) + " KB");
-        }
-      })
-      .catch(function () {
-        var pending = document.createElement("span");
-        pending.className = link.className + " button-pending";
-        pending.setAttribute("aria-disabled", "true");
-        pending.textContent = link.dataset.pending || "Folgt in Kürze";
-        link.replaceWith(pending);
-        if (meta && meta.parentElement.classList.contains("hero-actions")) meta.hidden = true;
-      });
-  });
 })();

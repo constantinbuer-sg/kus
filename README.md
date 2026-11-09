@@ -14,7 +14,6 @@ js/config.js        Podcast-Links (Spotify, Apple, …)
 js/site.js          Navigation, Plattform-Links, Download-Check
 fonts/              Anton (Schrift des Covers, SIL Open Font License)
 img/                Bilder, Cover, Favicons, OG-Bilder
-downloads/          Presse-Downloads
 vercel.json         Saubere URLs (/presse statt /presse.html)
 ```
 
@@ -48,12 +47,10 @@ Adresse ändern: in `index.html` im Abschnitt `WERBUNG` an beiden Stellen.
 
 ## Downloads im Pressebereich
 
-Die einzelnen Downloads (Cover, Pressefotos & Doppelporträt, Einzelporträts & Studiofotos,
-Logo & Schriftzug, Trailer) verlinken auf Tresorit-Freigaben. Links und Vorschaubilder stehen
-direkt in `presse.html` im Abschnitt `EINZELNE DOWNLOADS`.
-
-Die Pressemappe (großer Button oben) ist noch nicht fertig: Sobald sie da ist, als
-`downloads/kuehnert-und-schroeder-pressemappe.pdf` ablegen – der Button wird dann automatisch aktiv.
+Pressemappe (inkl. Pressemitteilung) und alle Einzel-Downloads (Cover, Pressefotos & Doppelporträt,
+Einzelporträts & Studiofotos, Logo & Schriftzug, Trailer horizontal & vertikal) verlinken auf
+Tresorit-Freigaben. Links und Vorschaubilder stehen direkt in `presse.html`
+(Pressemappe oben im Hero, der Rest im Abschnitt `EINZELNE DOWNLOADS`).
 
 ## Lokal starten
 
