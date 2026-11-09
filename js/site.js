@@ -33,6 +33,7 @@
   if (typeof podcastLinks !== "undefined") {
     document.querySelectorAll("[data-platform]").forEach(function (el) {
       var url = podcastLinks[el.dataset.platform];
+      el.dataset.track = "hoeren_" + el.dataset.platform;
       var go = el.querySelector(".platform-go");
       if (url && url !== "#") {
         el.setAttribute("href", url);
@@ -44,4 +45,10 @@
       }
     });
   }
+
+  // Klicks auf markierte Links an Simple Analytics melden (Name steht in data-track)
+  document.addEventListener("click", function (event) {
+    var el = event.target.closest("[data-track]");
+    if (el && el.getAttribute("href") && typeof window.sa_event === "function") window.sa_event(el.dataset.track);
+  });
 })();

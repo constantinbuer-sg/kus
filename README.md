@@ -45,6 +45,15 @@ Im Bereich „Werbung im Podcast“ gibt es kein Formular, sondern einen E-Mail-
 **team@kuehnertundschroeder.de** (öffnet das Mailprogramm mit Betreff „Werbeanfrage Kühnert & Schroeder“).
 Adresse ändern: in `index.html` im Abschnitt `WERBUNG` an beiden Stellen.
 
+## Besucherstatistik
+
+Simple Analytics (ohne Cookies, kein Banner nötig) ist auf allen Seiten eingebunden.
+Die Website muss im Simple-Analytics-Dashboard als `kuehnertundschroeder.de` angelegt sein.
+Gezählte Klicks (Events): `hero_jetzt_hoeren`, `hoeren_spotify|apple|amazon|deezer|youtube`,
+`werbung_email`, `presse_pressemappe|cover|doppelportraet|einzelportraets|logo|trailer`.
+Neuen Link mitzählen: `data-track="name"` an den Link schreiben (nur Buchstaben, Ziffern, Unterstriche).
+Die Datenschutzerklärung (Abschnitt IV) beschreibt den Dienst.
+
 ## Downloads im Pressebereich
 
 Pressemappe (inkl. Pressemitteilung) und alle Einzel-Downloads (Cover, Pressefotos & Doppelporträt,
