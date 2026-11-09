@@ -51,4 +51,37 @@
     var el = event.target.closest("[data-track]");
     if (el && el.getAttribute("href") && typeof window.sa_event === "function") window.sa_event(el.dataset.track);
   });
+
+  // „Adresse kopieren“: legt die E-Mail-Adresse in die Zwischenablage und bestätigt kurz
+  document.querySelectorAll("[data-copy]").forEach(function (button) {
+    var status = document.getElementById(button.getAttribute("aria-describedby"));
+    var timer;
+    function done(ok) {
+      if (status) status.textContent = ok ? "Kopiert!" : "Bitte Adresse markieren und kopieren.";
+      clearTimeout(timer);
+      timer = setTimeout(function () { if (status) status.textContent = ""; }, 2500);
+      if (ok && typeof window.sa_event === "function") window.sa_event("werbung_email_kopiert");
+    }
+    function fallback(text) {
+      var field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) {}
+      field.remove();
+      done(ok);
+    }
+    button.addEventListener("click", function () {
+      var text = button.dataset.copy;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { fallback(text); });
+      } else {
+        fallback(text);
+      }
+    });
+  });
 })();

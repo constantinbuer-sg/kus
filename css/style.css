@@ -253,6 +253,15 @@ a.platform:hover { background: rgba(255, 255, 255, 0.06); color: var(--ks-orange
 .contact-address { margin-top: 20px; font-size: 1rem; color: var(--ks-muted); }
 .contact-address a { color: var(--ks-white); text-underline-offset: 4px; overflow-wrap: anywhere; }
 .contact-address a:hover { color: var(--ks-orange-text); }
+/* „Adresse kopieren“: für alle ohne eingerichtetes Mailprogramm */
+.copy-mail {
+  display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; padding: 0 18px;
+  border: 1px solid var(--ks-rule); border-radius: 999px; background: transparent; color: var(--ks-white);
+  font-family: var(--font-display); font-size: 0.9375rem; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease;
+}
+.copy-mail:hover { border-color: var(--ks-orange-text); color: var(--ks-orange-text); }
+.copy-status { display: inline-block; margin-left: 14px; font-size: 0.9375rem; color: var(--ks-orange-text); }
 @media (min-width: 960px) { .contact-cta { align-self: center; } }
 @media (max-width: 559px) { .contact-cta .button { width: 100%; } }
 
