@@ -37,7 +37,7 @@ const podcastLinks = {
 
 Solange ein Link `"#"` ist, zeigt die Startseite „Folgt in Kürze“ und der Eintrag ist nicht klickbar.
 
-Logos: Spotify, Apple Podcasts, Deezer und YouTube stammen aus [Simple Icons](https://simpleicons.org) (CC0). Das RTL+-Logo ist als vereinfachtes SVG nachgezeichnet.
+Logos: Spotify, Apple Podcasts, Deezer und YouTube stammen aus [Simple Icons](https://simpleicons.org) (CC0). Das RTL+-Logo ist einfarbig nach der Vorlage von RTL nachgezeichnet (`.logo-rtl`).
 Das Amazon-Music-Logo steckt als Maske in `css/style.css` (`.logo-amazon`).
 
 ## Werbeanfragen
