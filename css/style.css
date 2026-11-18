@@ -217,6 +217,8 @@ a { color: inherit; }
 }
 .platform svg { width: 28px; height: 28px; fill: currentColor; }
 .platform-logo { display: flex; justify-content: center; }
+/* RTL+: breiteres Logo wie bei Amazon Music */
+.platform svg.logo-rtl { width: 40px; height: 24px; }
 /* Amazon Music: Logo als Maske, damit es wie die anderen Icons die Textfarbe übernimmt */
 .logo-amazon {
   display: block; width: 40px; height: 24px; background: currentColor;

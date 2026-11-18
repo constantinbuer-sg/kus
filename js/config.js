@@ -8,4 +8,5 @@ const podcastLinks = {
   amazon: "https://music.amazon.de/podcasts/9eaac077-c352-44f6-865f-0f1939f7d84d",
   deezer: "https://www.deezer.com/de/show/1003731681",
   youtube: "https://www.youtube.com/@KuehnertundSchroeder",
+  rtl: "https://plus.rtl.de/kuhnert-schroeder-p_285238",
 };

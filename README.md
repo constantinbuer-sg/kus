@@ -31,12 +31,13 @@ const podcastLinks = {
   amazon: "#",
   deezer: "#",
   youtube: "#",
+  rtl: "#",
 };
 ```
 
 Solange ein Link `"#"` ist, zeigt die Startseite „Folgt in Kürze“ und der Eintrag ist nicht klickbar.
 
-Logos: Spotify, Apple Podcasts, Deezer und YouTube stammen aus [Simple Icons](https://simpleicons.org) (CC0).
+Logos: Spotify, Apple Podcasts, Deezer und YouTube stammen aus [Simple Icons](https://simpleicons.org) (CC0). Das RTL+-Logo ist als vereinfachtes SVG nachgezeichnet.
 Das Amazon-Music-Logo steckt als Maske in `css/style.css` (`.logo-amazon`).
 
 ## Werbeanfragen
@@ -49,7 +50,7 @@ Adresse ändern: in `index.html` im Abschnitt `WERBUNG` an beiden Stellen.
 
 Simple Analytics (ohne Cookies, kein Banner nötig) ist auf allen Seiten eingebunden.
 Die Website muss im Simple-Analytics-Dashboard als `kuehnertundschroeder.de` angelegt sein.
-Gezählte Klicks (Events): `hero_jetzt_hoeren`, `hoeren_spotify|apple|amazon|deezer|youtube`,
+Gezählte Klicks (Events): `hero_jetzt_hoeren`, `hoeren_spotify|apple|amazon|deezer|youtube|rtl`,
 `werbung_email`, `presse_pressemappe|cover|doppelportraet|einzelportraets|logo|trailer`.
 Neuen Link mitzählen: `data-track="name"` an den Link schreiben (nur Buchstaben, Ziffern, Unterstriche).
 Die Datenschutzerklärung (Abschnitt IV) beschreibt den Dienst.
