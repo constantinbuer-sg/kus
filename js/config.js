@@ -1,6 +1,7 @@
 /*
  * Podcast-Links – hier die finalen URLs eintragen.
- * Solange ein Link "#" ist, zeigt die Startseite „Folgt in Kürze“ und der Eintrag ist nicht klickbar.
+ * Die Links stehen zusätzlich direkt in index.html (damit sie auch ohne JavaScript funktionieren).
+ * Bei einer Änderung bitte beide Stellen anpassen. Ein Link "#" zeigt „Folgt in Kürze“ (nur mit JavaScript).
  */
 const podcastLinks = {
   spotify: "https://open.spotify.com/show/5epA240nGssDsUqKTvniwf",

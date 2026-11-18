@@ -35,7 +35,7 @@ const podcastLinks = {
 };
 ```
 
-Solange ein Link `"#"` ist, zeigt die Startseite „Folgt in Kürze“ und der Eintrag ist nicht klickbar.
+Die Links stehen zusätzlich direkt in `index.html` (funktionieren so auch ohne JavaScript) – bei Änderungen beide Stellen anpassen.
 
 Logos: Spotify, Apple Podcasts, Deezer und YouTube stammen aus [Simple Icons](https://simpleicons.org) (CC0). Das RTL+-Logo ist einfarbig nach der Vorlage von RTL nachgezeichnet (`.logo-rtl`).
 Das Amazon-Music-Logo steckt als Maske in `css/style.css` (`.logo-amazon`).
@@ -73,3 +73,7 @@ npx serve .
 1. Repo auf GitHub anlegen und pushen.
 2. In Vercel „Add New → Project“, Repo importieren. Framework: *Other*, kein Build-Befehl.
 3. Unter *Settings → Domains* `www.kuehnertundschroeder.de` (und `kuehnertundschroeder.de`) hinzufügen und die DNS-Einträge beim Domain-Anbieter setzen.
+
+## Versteckte Seite /vorab
+
+`vorab.html` bietet der Presse Folge 1 und 2 per Tresorit-Link (passwortgeschützt) zum Download. Die Seite ist nirgends verlinkt und für Suchmaschinen gesperrt (`noindex` im HTML und als `X-Robots-Tag` in `vercel.json`).
